@@ -26,40 +26,40 @@ function CO2Map() {
     };
 
     const onEachCountry = (country, layer) => {
-        layer.on({
-            mouseover: () => {
-                const coordinates = getCustomCentroid(country);
-                setActiveCountry({
-                    name: country.properties.name,
-                    latlng: [coordinates[1], coordinates[0]]
-                });
-            },
-            mouseout: () => {
-                setActiveCountry(null);
-            }
-        });
+      layer.on({
+        mouseover: () => {
+          const coordinates = getCustomCentroid(country);
+          setActiveCountry({
+              name: country.properties.name,
+              latlng: [coordinates[1], coordinates[0]]
+          });
+        },
+        mouseout: () => {
+            setActiveCountry(null);
+        }
+      });
     };
 
 
     // Define the style for the GeoJSON countries
     const countryStyle = {
-        fillColor: "#444c63", // No fill to show only the outlines
-        weight: 2, // Border line weight
-        opacity: 1,
-        color: '#272C38', // Border line color
-        fillOpacity: 0.7
+      fillColor: "#444c63", // No fill to show only the outlines
+      weight: 2, // Border line weight
+      opacity: 1,
+      color: '#272C38', // Border line color
+      fillOpacity: 0.7
     };
 
     return (
-        <MapContainer center={position} zoom={2} style={{ height: "100vh" }} maxBounds={maxBounds}>
-            <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
-            <GeoJSON data={countries} style={countryStyle} onEachFeature={onEachCountry} />
-            {activeCountry && (
-                <Popup position={activeCountry.latlng}>
-                    {activeCountry.name}
-                </Popup>
-            )}
-        </MapContainer>
+      <MapContainer center={position} zoom={2} style={{ height: "100%" }} maxBounds={maxBounds}>
+        <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
+        <GeoJSON data={countries} style={countryStyle} onEachFeature={onEachCountry} />
+        {activeCountry && (
+          <Popup position={activeCountry.latlng}>
+            {activeCountry.name}
+          </Popup>
+        )}
+      </MapContainer>
     );
 }
 

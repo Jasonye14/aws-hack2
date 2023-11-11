@@ -3,7 +3,8 @@ import React from "react";
 // Styles
 import {
   MainContent,
-  MainPageStyle
+  MainPageStyle,
+  MainPageBody
 } from './mainStyles';
 
 // Components
@@ -15,9 +16,19 @@ function MainPage() {
   return (
     <MainPageStyle>
       <MainHeader />
-      <MainContent>
-        <CO2Map />
-      </MainContent>
+      <MainPageBody>
+        <MainSideBar>
+          This is the sidebar...
+        </MainSideBar>
+
+        <MainContent>
+          <CO2Map />
+        </MainContent>
+
+        <MainSideBar>
+          This is the sidebar...
+        </MainSideBar>
+      </MainPageBody>
     </MainPageStyle>
   );
 }
