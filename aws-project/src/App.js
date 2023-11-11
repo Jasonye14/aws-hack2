@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import CO2Map from './components/CO2Map';
-const fs = require("fs");
+import React from 'react';
+
+import './App.css';
+import CO2Map from './components/CO2Map/CO2Map';
+import MainPage from './pages/main';
+import WorldMap from './components/CO2Map/CO2Map';
 
 function App() {
   const [averages, setAverages] = useState({});
@@ -14,8 +17,8 @@ function App() {
 
   return (
     <div className="App">
-      <CO2Map />
-      <div>123</div>
+      <MainPage />
+      <WorldMap />
     </div>
   );
 }
