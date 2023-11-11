@@ -1,11 +1,10 @@
-import React from 'react';
-import CO2Map from './components/CO2Map'; 
+import React from 'react'; 
+import WorldMap from './components/CO2Map';
 
 function App() {
   return (
     <div className="App">
-      <CO2Map />
-      <div>123</div>
+      <WorldMap />
     </div>
   );
 }
