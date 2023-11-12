@@ -9,6 +9,7 @@ import {
 
 // Components
 import CO2Map from "../components/CO2Map/CO2Map";
+import Card from "../components/card/card"
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
 
@@ -18,6 +19,7 @@ function MainPage() {
       <MainHeader />
       <MainPageBody>
         <MainSideBar>
+        
           This is the sidebar...
         </MainSideBar>
 

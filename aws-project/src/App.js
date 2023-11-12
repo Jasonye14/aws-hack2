@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import './App.css';
 import CO2Map from './components/CO2Map/CO2Map';

@@ -51,7 +51,7 @@ function CO2Map() {
     };
 
     return (
-      <MapContainer center={position} zoom={2} style={{ height: "100%", width: "100%" }} maxBounds={maxBounds}>
+      <MapContainer center={position} minZoom={1.5} zoom={2} style={{ height: "100%", width: "100%" }} maxBounds={maxBounds}>
         <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
         <GeoJSON data={countries} style={countryStyle} onEachFeature={onEachCountry} />
         {activeCountry && (
