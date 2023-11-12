@@ -1,10 +1,11 @@
 import { Header } from "./headerStyles"
+import './header.css';
 
 // Usage in component
 function MainHeader() {
   return (
     <Header>
-      <div>This is where header content would be...</div>
+      <div className="name" >Airlytics</div>
     </Header>
   );
 }
