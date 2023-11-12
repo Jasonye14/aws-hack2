@@ -11,6 +11,7 @@ import {
 import CO2Map from "../components/CO2Map/CO2Map";
 import Card from "../components/card/card";
 import CountryInfoCard from '../components/countryInfoCard/CountryInfoCard';
+import FootPrintCard from "../components/eduCards/footprintCard/footprintCard";
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
 import DateDisplay from "../components/dateBlock/dateBlock";
@@ -46,8 +47,9 @@ function MainPage() {
         </MainContent>
 
         <MainSideBar>
-          <CountryInfoCard/>
-          <Card></Card>
+          <FootPrintCard></FootPrintCard>
+          <card></card>
+          <FootPrintCard></FootPrintCard>
         </MainSideBar>
       </MainPageBody>
     </MainPageStyle>

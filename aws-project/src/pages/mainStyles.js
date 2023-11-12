@@ -15,8 +15,10 @@ const MainPageStyle = styled.div`
 const MainPageBody = styled.div`
   display: flex;
   flex-direction: row;
+  flex-grow: 0;
   align-items: stretch;
   justify-content: space-between;
+  overflow: hidden;
 
   height: 100%;
   padding-block: 20px;
@@ -27,7 +29,7 @@ const MainPageBody = styled.div`
 const MainContent = styled.div`
   display: flex;
   width: 42.5vw;
-  height: 90%;
+  height: 100%;
 `;
 
 export {
