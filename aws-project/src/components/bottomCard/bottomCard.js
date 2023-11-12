@@ -44,6 +44,10 @@ const Selector = styled.select`
   border-radius: 4px;
   padding: 5px;
   margin-bottom: 10px;
+
+  .CircularProgressBar {
+    width: 100px;
+  }
 `;
 
 const ButtonRow = styled.div`
@@ -52,6 +56,7 @@ const ButtonRow = styled.div`
   display: flex;
   gap: 10px;
   overflow-x: auto; // In case of overflow, allow horizontal scrolling
+  min-height: min-content;
 `;
 
 const Button = styled.button`
@@ -183,18 +188,18 @@ const PollutionCard = ({data}) => {
             <>
               <Section>
                 <SectionTitle>{'CO'}</SectionTitle>
-                  <CircularProgressbar
-                    value={pollInfo['CO'].value}
-                    maxValue={ranges[pollInfo['CO'].code].high}
-                    text={`${Math.round(pollInfo['CO'].value)} ${pollInfo['CO'].unit}`}
-                    styles={buildStyles({
-                      textColor: '#fff',
-                      pathColor: pollInfo['CO'].value <= ranges[pollInfo['CO'].code].low ? '#2ecc71'
-                      : pollInfo['CO'].value <= ranges[pollInfo['CO'].code].high ? '#f1c40f' : '#e74c3c',
-                      trailColor: '#204d74',
-                      pathTransitionDuration: 0.5,
-                    })}
-                  />
+                <CircularProgressbar
+                  value={pollInfo['CO'].value}
+                  maxValue={ranges[pollInfo['CO'].code].high}
+                  text={`${Math.round(pollInfo['CO'].value)} ${pollInfo['CO'].unit}`}
+                  styles={buildStyles({
+                    textColor: '#fff',
+                    pathColor: pollInfo['CO'].value <= ranges[pollInfo['CO'].code].low ? '#2ecc71'
+                    : pollInfo['CO'].value <= ranges[pollInfo['CO'].code].high ? '#f1c40f' : '#e74c3c',
+                    trailColor: '#204d74',
+                    pathTransitionDuration: 0.5,
+                  })}
+                />
               </Section>
 
               <Section>
@@ -228,28 +233,30 @@ const PollutionCard = ({data}) => {
                   })}
                 />
               </Section>
-              </>
+            </>
         )) :
-          <>
-            <Section>
-              <SectionTitle>{selectedPollutant}</SectionTitle>
-              <CircularProgressbar
-                value={pollInfo[selectedPollutant].value}
-                maxValue={ranges[pollInfo[selectedPollutant].code].high}
-                text={`${Math.round(pollInfo[selectedPollutant].value)} ${pollInfo[selectedPollutant].unit}`}
-                styles={buildStyles({
-                  textColor: '#fff',
-                  pathColor: pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].low ? '#2ecc71'
-                  : pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].high ? '#f1c40f' : '#e74c3c',
-                  trailColor: '#204d74',
-                  pathTransitionDuration: 0.5,
-                })}
-              />
-            </Section>
-            <div>
-              {pollInfo[selectedPollutant].sources}
-            </div>
-          </>
+          (Object.keys(pollInfo).length === 6 && (
+            <>
+              <Section>
+                <SectionTitle>{selectedPollutant}</SectionTitle>
+                <CircularProgressbar
+                  value={pollInfo[selectedPollutant].value}
+                  maxValue={ranges[pollInfo[selectedPollutant].code].high}
+                  text={`${Math.round(pollInfo[selectedPollutant].value)} ${pollInfo[selectedPollutant].unit}`}
+                  styles={buildStyles({
+                    textColor: '#fff',
+                    pathColor: pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].low ? '#2ecc71'
+                    : pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].high ? '#f1c40f' : '#e74c3c',
+                    trailColor: '#204d74',
+                    pathTransitionDuration: 0.5,
+                  })}
+                />
+              </Section>
+              <div>
+                {pollInfo[selectedPollutant].sources}
+              </div>
+            </>
+          ))
         }
       </BottomCardBody>
     </BottomCard>
