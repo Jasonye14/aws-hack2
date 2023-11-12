@@ -31,7 +31,6 @@ function MainPage() {
 
         <MainSideBar>
           <FootPrintCard></FootPrintCard>
-          <card></card>
           <FootPrintCard></FootPrintCard>
         </MainSideBar>
       </MainPageBody>

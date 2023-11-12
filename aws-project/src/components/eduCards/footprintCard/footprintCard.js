@@ -5,10 +5,13 @@ import styled from '@emotion/styled';
 const Card = styled.div`
   background-color: #2a2f3a; /* Dark slate background */
   color: #ffffff;
+
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
   max-width: 320px; /* Maximum width of the card */
+
+  text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 `;
@@ -43,22 +46,21 @@ const BulletList = styled.ul`
   margin-left: 20px; /* Indent for the bullet points */
 `;
 
-function FootPrintCard() {
+// Usage in component
+export default function FootPrintCard() {
   return (
     <Card>
       <CardTitle>Reduce Your Carbon Footprint</CardTitle>
       <CardContent>
-        Small changes in our everyday lives can have a significant impact on reducing carbon emissions. Here are practical steps you can take:
-      </CardContent>
+      Small changes in our everyday lives can have a significant impact on reducing carbon emissions. Here are practical steps you can take:      </CardContent>
       <BulletList>
-        <BulletPoint>Use public transportation or carpool to reduce car emissions.</BulletPoint>
-        <BulletPoint>Switch to energy-efficient appliances and light bulbs.</BulletPoint>
-        <BulletPoint>Reduce meat consumption to lower methane emissions.</BulletPoint>
-        <BulletPoint>Recycle and compost to minimize waste in landfills.</BulletPoint>
-        <BulletPoint>Support renewable energy sources like solar and wind power.</BulletPoint>
+        <BulletPoint>🚘  Use public transportation or carpool to reduce car emissions.</BulletPoint>
+        <BulletPoint>💡  Switch to energy-efficient appliances and light bulbs.</BulletPoint>
+        <BulletPoint>🐄  Reduce meat consumption to lower methane emissions.</BulletPoint>
+        <BulletPoint>🚮  Recycle and compost to minimize waste in landfills.</BulletPoint>
+        <BulletPoint>☀️   Support renewable energy sources like solar and wind power.</BulletPoint>
       </BulletList>
     </Card>
   );
 }
 
-export default FootPrintCard;
