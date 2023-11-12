@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './App.css';
 import CO2Map from './components/CO2Map/CO2Map';
 import MainPage from './pages/main';
 
 function App() {
-  const [averages, setAverages] = useState({});
+  const [data, setData] = useState({});
 
   useEffect(() => {
-    async function fetchData() {
-      // get data from csv
-    }
-    fetchData();
+
+    fetch("https://airquality.googleapis.com/v1/currentConditions:lookup?key=AIzaSyACtvFhkIF7nUaCXpLiZmpauqJG5mTPaB4", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      mode: "no-cors"
+    }).then(res => res.json()).then(data => { console.log(data); });
+
   }, []);
 
   return (
