@@ -22,6 +22,7 @@ import InfoCard from "../components/InfoCard/InfoCard";
 //right side
 import FootPrintCard from "../components/eduCards/footprintCard/footprintCard";
 import EcoProductCard from "../components/eduCards/ecoProductCard/ecoProductCard";
+import PolicyCard from "../components/eduCards/policyCard/policyCard";
 
 function MainPage() {
   //country handler
@@ -50,6 +51,7 @@ function MainPage() {
         <MainSideBar>
           <FootPrintCard></FootPrintCard>
           <EcoProductCard></EcoProductCard>
+          <PolicyCard></PolicyCard>
         </MainSideBar>
       </MainPageBody>
     </MainPageStyle>
