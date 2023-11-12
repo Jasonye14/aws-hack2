@@ -3,6 +3,8 @@
 ## Overview
 Airlytics is a dynamic visualization tool designed to demonstrate the varying environmental factors across the globe. Leveraging real-time data, this tool provides an insightful view into how different regions experience distinct environmental conditions. This project is ideal for environmental researchers, data analysts, and anyone interested in global environmental trends.
 
+![Airlytics Site](site-preview.jpg)
+
 ## Applciation Introduction
 1. **Interactive Data Visualization:** Airlytics offers an interactive map interface that allows users to explore various environmental factors across different regions of the world.
 2. **Real-Time Data Integration:** The tool integrates real-time data to ensure that the information displayed is current and relevant.
