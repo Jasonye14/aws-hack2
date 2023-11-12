@@ -5,6 +5,15 @@ import CO2Map from './components/CO2Map/CO2Map';
 import MainPage from './pages/main';
 
 function App() {
+  const [averages, setAverages] = useState({});
+
+  useEffect(() => {
+    async function fetchData() {
+      // get data from csv
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
       <MainPage />
