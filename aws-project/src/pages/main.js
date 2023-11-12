@@ -9,9 +9,6 @@ import {
 
 // Components
 import CO2Map from "../components/CO2Map/CO2Map";
-import Card from "../components/card/card";
-import CountryInfoCard from '../components/countryInfoCard/CountryInfoCard';
-import FootPrintCard from "../components/eduCards/footprintCard/footprintCard";
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
 import DateDisplay from "../components/dateBlock/dateBlock";
@@ -21,6 +18,10 @@ import DateDisplay from "../components/dateBlock/dateBlock";
 import CO2Card from "../components/CO2card/co2Card";
 import EnvironmentalCard from "../components/EnviroCard/EnvironmentalCard";
 import InfoCard from "../components/InfoCard/InfoCard";
+
+//right side
+import FootPrintCard from "../components/eduCards/footprintCard/footprintCard";
+import EcoProductCard from "../components/eduCards/ecoProductCard/ecoProductCard";
 
 function MainPage() {
   //country handler
@@ -48,7 +49,7 @@ function MainPage() {
 
         <MainSideBar>
           <FootPrintCard></FootPrintCard>
-          <FootPrintCard></FootPrintCard>
+          <EcoProductCard></EcoProductCard>
         </MainSideBar>
       </MainPageBody>
     </MainPageStyle>

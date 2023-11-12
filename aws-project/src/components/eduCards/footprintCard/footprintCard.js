@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 // Styled components
 const Card = styled.div`
-  background-color: #2a2f3a; /* Dark slate background */
+  background-color: #222538;
   color: #ffffff;
 
   border-radius: 10px;
@@ -12,12 +12,12 @@ const Card = styled.div`
   max-width: 320px; /* Maximum width of the card */
 
   text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 `;
 
 const CardTitle = styled.h2`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 15px;
   color: #21d4fd; /* A bright color for the title */
 `;
