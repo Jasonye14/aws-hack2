@@ -1,0 +1,12 @@
+.Header {
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+  }
+.name {
+    margin-left: 24px;
+    font-size: 20px; /* Large, prominent size */
+    font-weight: bold; /* Bold to make it stand out */
+    letter-spacing: 2px; /* Spacing for a techy feel */
+    text-transform: uppercase; /* Uppercase for a strong presence */
+    text-shadow: 2px 2px 4px #000000; /* Subtle shadow for depth */
+  }
+  
