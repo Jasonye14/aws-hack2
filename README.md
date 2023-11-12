@@ -1,3 +1,3 @@
 # Emissions Map
 
-### We propose a visualization tool to better understand the consumption of energy in the North America region.
+### We propose a visualization tool to help demonstrate how environmental factors differ throughout the world.
