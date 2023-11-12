@@ -7,7 +7,7 @@ const EnvironmentalCard = () => {
   const [activeTab, setActiveTab] = useState('today');
   const data = {
     plannedTrees: 200,
-    plantedTrees: 50,
+    plantedTrees: 100,
     totalTreesGoal: 250,
     carbonOffsetAchieved: 125, // in tons
     carbonOffsetGoal: 250 // in tons
