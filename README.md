@@ -6,11 +6,12 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 ## Applciation Introduction
 1. **Interactive Data Visualization:** Airlytics offers an interactive map interface that allows users to explore various environmental factors across different regions of the world.
 2. **Real-Time Data Integration:** The tool integrates real-time data to ensure that the information displayed is current and relevant.
-3. **Customizable Data Filters:** Users can customize their data viewing experience by applying filters based on specific environmental metrics.
-4. **Responsive Design:** Designed with React, Airlytics is fully responsive and provides an optimal viewing experience across various devices and screen sizes.
-5. **Data Caching:** Utilizing AWS S3, the tool efficiently caches data, enhancing performance and user experience.
-6. **CI/CD with AWS Amplify:** The use of AWS Amplify ensures continuous integration and continuous deployment, streamlining development workflows.
-7. **Secure Data Storage:** AWS S3 is employed to securely store and manage the environmental data, ensuring data integrity and security.
+3. **Global Locator** The map provides the exact longtitude and latitude that the user clickes on and gives the correponding data for that exact area.
+4. **Customizable Data Filters:** Users can customize their data viewing experience by applying filters based on specific environmental metrics.
+5. **Responsive Design:** Designed with React, Airlytics is fully responsive and provides an optimal viewing experience across various devices and screen sizes.
+6. **Data Caching:** Utilizing AWS S3, the tool efficiently caches data, enhancing performance and user experience.
+7. **CI/CD with AWS Amplify:** The use of AWS Amplify ensures continuous integration and continuous deployment, streamlining development workflows.
+8. **Secure Data Storage:** AWS S3 is employed to securely store and manage the environmental data, ensuring data integrity and security.
 
 ## Features
 
@@ -41,6 +42,13 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 - Presents population density data.
 - Provides insights into the population distribution in relation to land area.
 
+### Environmental Air Quality Metrics
+- CO
+- NO2
+- SO2
+- O3
+- PM 2.5
+- PM 10
 
 ### Carbon Footprint
 - Educational Information about carbon footprint
