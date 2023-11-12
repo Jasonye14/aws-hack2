@@ -4,7 +4,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 76px;
 
   border-bottom: 4px solid #2C2F40;
 

@@ -12,6 +12,7 @@ import CO2Map from "../components/CO2Map/CO2Map";
 import Card from "../components/card/card"
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
+import DateDisplay from "../components/dateBlock/dateBlock";
 
 function MainPage() {
   return (
@@ -19,7 +20,7 @@ function MainPage() {
       <MainHeader />
       <MainPageBody>
         <MainSideBar>
-          <Card></Card>
+          <DateDisplay />
         </MainSideBar>
 
         <MainContent>

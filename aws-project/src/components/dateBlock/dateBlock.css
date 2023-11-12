@@ -1,0 +1,23 @@
+.date-display-container {
+    display: flex;
+    justify-content: space-between;
+    /*background-color: #0F1924; /* dark background */
+    color: white; /* white text */
+    padding: 15px 30px; /* some padding */
+    border-radius: 10px; /* rounded corners */
+    font-family: 'Arial', sans-serif; /* Font similar to the image */
+    width: fit-content; /* only as wide as it needs to be */
+  }
+  
+  .date-section {
+    border-right: 1px solid #ffffff40; /* semi-transparent white border */
+    padding-right: 20px; /* padding to the right of the date */
+    margin-right: 20px; /* space between date and time */
+    font-size: 0.9em; /* smaller font size */
+  }
+  
+  .time-section {
+    font-size: 1em; /* larger font size */
+    font-weight: bold; /* bold font */
+  }
+  
