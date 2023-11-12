@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 const MainPageStyle = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   width: 100%;
   height: 100%;
 
@@ -14,11 +15,18 @@ const MainPageStyle = styled.div`
 const MainPageBody = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+
+  height: 100%;
+  padding-block: 20px;
+  padding-inline: 1rem;
+
 `;
 
 const MainContent = styled.div`
-  padding: 16px;
-  flex-grow: 1;
+  display: flex;
+  width: 40vw;
   height: 90%;
 `;
 
