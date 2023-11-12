@@ -13,6 +13,14 @@
     margin-bottom: 24px;
     text-align: center;
   }
+
+  .card h4 {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
   
   .stat {
     display: flex;

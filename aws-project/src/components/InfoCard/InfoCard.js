@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './InfoCard.css'; 
 
+
 const InfoCard = ({ countryName, location }) => {
     const formattedLocation = location.lat && location.lng 
         ? `Lat: ${location.lat.toFixed(4)}, Lng: ${location.lng.toFixed(4)}`

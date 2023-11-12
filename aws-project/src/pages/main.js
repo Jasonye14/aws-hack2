@@ -48,7 +48,7 @@ function MainPage() {
         <MainSideBar>
           <DateDisplay />
           <InfoCard countryName={selectedCountry} location={clickedCoords} />
-          <CO2Card/>
+          <CO2Card countryName={selectedCountry}/>
           <EnvironmentalCard/>
         </MainSideBar>
 
