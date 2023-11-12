@@ -22,7 +22,6 @@ function MainPage() {
         <MainSideBar>
           <CountryInfoCard/>
           <Card></Card>
-          This is the sidebar...
         </MainSideBar>
 
         <MainContent>
