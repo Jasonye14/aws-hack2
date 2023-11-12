@@ -14,18 +14,18 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 
 ## Features
 
-### CO2 Emissions Tracking Card
+### CO2 Emissions Tracking
 
-**Dynamic Data Representation**
+#### Dynamic Data Representation
 - Showcases CO2 emissions and environmental data for different countries.
 - Dynamically updates based on the selected country.
 
-**#### Population and Emissions Data**
+#### Population and Emissions Data
 - Displays population data for 2023.
 - Tracks CO2 emissions for 2017 and 2020.
 - Offers a comprehensive view of environmental impact.
 
-**#### Growth Rate Analysis**
+#### Growth Rate Analysis
 - Visualization of the population growth rate.
 - Includes a color-coded bar indicating positive or negative growth.
 
@@ -42,6 +42,15 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 - Provides insights into the population distribution in relation to land area.
 
 
+### Carbon Footprint
+- Educational Information about carbon footprint
+- Tips and Suggestions for improving environmental factors
+
+### Eco-Friendly Products
+- Suggestions of products thta fits sustainability goals
+
+### Local Policies & Initiatives
+- Provides information about initiatives and policies of local sustainability efforts(focued on Lehigh Valley)
 
 ## Tech Stack
 - **React:** For building a dynamic and responsive user interface.
