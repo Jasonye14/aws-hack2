@@ -1,0 +1,53 @@
+.card {
+    /*background: #FFF;*/
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    width: 300px;
+  }
+  
+  .card h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .stat-title {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 4px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 6px;
+  }
+  
+  .stat-bar {
+    background: #e0e0e0;
+    border-radius: 8px;
+    height: 20px;
+    overflow: hidden;
+  }
+  
+  .stat-progress {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.5s ease;
+  }
+  
+  /* Progress bar colors */
+  .stat-total-emissions .stat-progress { background-color: #ff7b72; }
+  .stat-reduction-target .stat-progress { background-color: #5cdb95; }
+  .stat-offset-projects .stat-progress { background-color: #83aaff; }
+  
