@@ -3,46 +3,52 @@ import { css } from '@emotion/react';
 import React from 'react';
 
 const cardStyle = css`
-  width: 300px;
-  border: 1px solid #ddd;
+  background-color: #1A202C;
+  width: 86%;
+  height: auto;
+  margin: 20px 30px;
+  border: 1px solid #334155;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: all 0.3s ease;
   &:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 `;
 
 const headerStyle = css`
-  padding: 15px;
-  background-color: #007bff;
-  color: white;
+  padding: 10px 15px;
+  background-color: #1A202C;
+  color: #E2E8F0;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #334155;
 `;
 
 const bodyStyle = css`
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
   align-items: center;
 `;
 
 const statStyle = css`
-  margin: 10px 0;
   text-align: center;
+  color: #CBD5E1;
 `;
 
 const titleStyle = css`
-  margin-bottom: 5px;
-  color: #007bff;
+  margin-bottom: 3px;
+  color: #63B3ED;
+  font-size: 0.9em; // Smaller font size for the title
 `;
 
 const valueStyle = css`
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
+  color: #FBBF24;
 `;
 
 const Card = () => {
@@ -56,7 +62,7 @@ const Card = () => {
   return (
     <div css={cardStyle}>
       <div css={headerStyle}>
-        <h2>{title}</h2>
+        <h2 css={titleStyle}>{title}</h2> {/* Apply titleStyle to the title */}
       </div>
       <div css={bodyStyle}>
         {stats.map((stat, index) => (

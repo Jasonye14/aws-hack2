@@ -5,7 +5,7 @@ import { Sidebar } from "./sidebarStyles";
 
 function MainSideBar(props) {
   return (
-    <Sidebar>This is the sidebar...
+    <Sidebar>
       {props.children}
     </Sidebar>
   );

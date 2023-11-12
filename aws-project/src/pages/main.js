@@ -20,7 +20,6 @@ function MainPage() {
       <MainPageBody>
         <MainSideBar>
           <Card></Card>
-          This is the sidebar...
         </MainSideBar>
 
         <MainContent>
