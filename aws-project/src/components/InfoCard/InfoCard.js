@@ -3,7 +3,7 @@ import './InfoCard.css';
 
 const InfoCard = ({ countryName, location }) => {
     const formattedLocation = location.lat && location.lng 
-        ? `Lat: ${location.lat.toFixed(2)}, Lng: ${location.lng.toFixed(2)}`
+        ? `Lat: ${location.lat.toFixed(4)}, Lng: ${location.lng.toFixed(4)}`
         : "Click on map to get coordinates";
 
     return (

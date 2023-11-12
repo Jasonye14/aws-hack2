@@ -34,6 +34,11 @@ function MainPage() {
     setClickedCoords({ lat: countryData.lat, lng: countryData.lng });
   };
 
+  const handleMapClick = (lat, lng) => {
+    setClickedCoords({ lat, lng });
+};
+
+
   return (
     <MainPageStyle>
       <MainHeader />

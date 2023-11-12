@@ -6,6 +6,7 @@ import { point, centerOfMass } from '@turf/turf';
 
 function CO2Map({ onCountryClick, onMapClick }) {
   const [activeCountry, setActiveCountry] = useState(null);
+  const [clickedPosition, setClickedPosition] = useState(null);
   const position = [51.505, -0.09]; // Center of the map
   const maxBounds = [[-90, -180], [90, 180]]; // Maximum bounds for the map
 
@@ -26,13 +27,14 @@ function CO2Map({ onCountryClick, onMapClick }) {
   };
 
   const onEachCountry = (country, layer) => {
-      layer.on({
-        click: () => {
-          const coordinates = getCustomCentroid(country);
+    layer.on({
+      click: (e) => {
+          const lat = e.latlng.lat;
+          const lng = e.latlng.lng;
           onCountryClick({
               name: country.properties.name,
-              lat: coordinates[1],
-              lng: coordinates[0]
+              lat: lat,
+              lng: lng
           });
       },
           mouseover: () => {
@@ -47,6 +49,13 @@ function CO2Map({ onCountryClick, onMapClick }) {
           }
       });
   };
+
+  const mapClick = (e) => {
+    const lat = e.latlng.lat;
+    const lng = e.latlng.lng;
+    setClickedPosition([lat, lng]);
+    onMapClick && onMapClick(lat, lng);
+};
 
     // Define the style for the GeoJSON countries
     const countryStyle = {
