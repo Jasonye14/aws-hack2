@@ -26,7 +26,7 @@ const MainPageBody = styled.div`
 
 const MainContent = styled.div`
   display: flex;
-  width: 40vw;
+  width: 42.5vw;
   height: 90%;
 `;
 

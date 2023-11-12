@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 // Styles
 import {
@@ -19,7 +19,7 @@ function MainPage() {
       <MainHeader />
       <MainPageBody>
         <MainSideBar>
-        
+          <Card></Card>
           This is the sidebar...
         </MainSideBar>
 
