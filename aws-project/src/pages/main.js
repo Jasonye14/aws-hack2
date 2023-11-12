@@ -20,8 +20,6 @@ function MainPage() {
       <MainHeader />
       <MainPageBody>
         <MainSideBar>
-          <CountryInfoCard/>
-          <Card></Card>
         </MainSideBar>
 
         <MainContent>
@@ -29,7 +27,8 @@ function MainPage() {
         </MainContent>
 
         <MainSideBar>
-          This is the sidebar...
+          <CountryInfoCard/>
+          <Card></Card>
         </MainSideBar>
       </MainPageBody>
     </MainPageStyle>
