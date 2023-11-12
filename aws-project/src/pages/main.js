@@ -36,9 +36,9 @@ function MainPage() {
     setClickedCoords({ lat: countryData.lat, lng: countryData.lng });
   };
 
-  const handleMapClick = (lat, lng) => {
-    setClickedCoords({ lat: lat, lng: lng });
-  };
+  // const handleMapClick = (lat, lng) => {
+  //   setClickedCoords({ lat: lat, lng: lng });
+  // };
 
   const [data, setData] = useState(null);
 

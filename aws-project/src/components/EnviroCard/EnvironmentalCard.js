@@ -31,9 +31,17 @@ const EnvironmentalCard = ({data}) => {
   return (
     <div className="environmental-card">
       <div className="button-group">
-        <button className={activeTab === 'general' ? 'active' : ''} onClick={() => setActiveTab('general')}>GENERAL</button>
-        <button className={activeTab === 'athlete' ? 'active' : ''} onClick={() => setActiveTab('athlete')}>ATHLETES</button>
+        <button className={activeTab === 'generalPopulation' ? 'active' : ''} onClick={() => setActiveTab('generalPopulation')}>GENERAL</button>
+        <button className={activeTab === 'athletes' ? 'active' : ''} onClick={() => setActiveTab('athletes')}>ATHLETES</button>
         <button className={activeTab === 'elderly' ? 'active' : ''} onClick={() => setActiveTab('elderly')}>ELDERLY</button>
+      </div>
+      {/* Display the advice based on the active tab */}
+      <div className="advice-section">
+        {info[activeTab] ? (
+          <p>{info[activeTab]}</p>
+        ) : (
+          <p>No specific advice available. Stay safe!</p>
+        )}
       </div>
     </div>
   );

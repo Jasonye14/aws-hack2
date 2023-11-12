@@ -37,14 +37,14 @@ const SectionTitle = styled.h3`
   font-size: 14px; // Adjust font size as needed
 `;
 
-const Selector = styled.select`
-  background-color: #252525;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 5px;
-  margin-bottom: 10px;
-`;
+// const Selector = styled.select`
+//   background-color: #252525;
+//   color: #fff;
+//   border: 1px solid #333;
+//   border-radius: 4px;
+//   padding: 5px;
+//   margin-bottom: 10px;
+// `;
 
 const ButtonRow = styled.div`
   background-color: #2c3e50; // Dark background color
@@ -52,6 +52,7 @@ const ButtonRow = styled.div`
   display: flex;
   gap: 10px;
   overflow-x: auto; // In case of overflow, allow horizontal scrolling
+  min-height: min-content;
 `;
 
 const Button = styled.button`
@@ -102,14 +103,14 @@ const ranges = {
   }
 }
 
-const pollutionLevels = {
-  CO: { level: 6, max: 50, unit: 'ppm' }, // values in ppm
-  SO2: { level: 5, max: 500, unit: 'ppb' }, // values in ppb
-  NO2: { level: 30, max: 200, unit: 'ppb' }, // values in ppb
-  O3: { level: 60, max: 240, unit: 'ppb' }, // values in ppb
-  PM25: { level: 12, max: 35, unit: 'µg/m3' }, // values in µg/m3
-  PM10: { level: 25, max: 50, unit: 'µg/m3' }, // values in µg/m3
-};
+// const pollutionLevels = {
+//   CO: { level: 6, max: 50, unit: 'ppm' }, // values in ppm
+//   SO2: { level: 5, max: 500, unit: 'ppb' }, // values in ppb
+//   NO2: { level: 30, max: 200, unit: 'ppb' }, // values in ppb
+//   O3: { level: 60, max: 240, unit: 'ppb' }, // values in ppb
+//   PM25: { level: 12, max: 35, unit: 'µg/m3' }, // values in µg/m3
+//   PM10: { level: 25, max: 50, unit: 'µg/m3' }, // values in µg/m3
+// };
 
 const PollutionCard = ({data}) => {
   const [selectedPollutant, setSelectedPollutant] = useState('All');
@@ -148,20 +149,20 @@ const PollutionCard = ({data}) => {
     }
   }, [data])
 
-  useEffect(() => {
-    console.log(pollInfo)
-  }, [pollInfo])
+  // useEffect(() => {
+  //   console.log(pollInfo)
+  // }, [pollInfo])
 
-  useEffect(() => {
-    if (selectedPollutant != 'All') {
-      console.log(ranges[pollInfo[selectedPollutant].code].high);
+  // useEffect(() => {
+  //   if (selectedPollutant !== 'All') {
+  //     console.log(ranges[pollInfo[selectedPollutant].code].high);
 
-    }
-  }, [selectedPollutant]);
+  //   }
+  // }, [selectedPollutant, pollInfo]);
 
-  const handleChange = (event) => {
-    setSelectedPollutant(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setSelectedPollutant(event.target.value);
+  // };
 
 
   return (
@@ -183,18 +184,18 @@ const PollutionCard = ({data}) => {
             <>
               <Section>
                 <SectionTitle>{'CO'}</SectionTitle>
-                  <CircularProgressbar
-                    value={pollInfo['CO'].value}
-                    maxValue={ranges[pollInfo['CO'].code].high}
-                    text={`${Math.round(pollInfo['CO'].value)} ${pollInfo['CO'].unit}`}
-                    styles={buildStyles({
-                      textColor: '#fff',
-                      pathColor: pollInfo['CO'].value <= ranges[pollInfo['CO'].code].low ? '#2ecc71'
-                      : pollInfo['CO'].value <= ranges[pollInfo['CO'].code].high ? '#f1c40f' : '#e74c3c',
-                      trailColor: '#204d74',
-                      pathTransitionDuration: 0.5,
-                    })}
-                  />
+                <CircularProgressbar
+                  value={pollInfo['CO'].value}
+                  maxValue={ranges[pollInfo['CO'].code].high}
+                  text={`${Math.round(pollInfo['CO'].value)} ${pollInfo['CO'].unit}`}
+                  styles={buildStyles({
+                    textColor: '#fff',
+                    pathColor: pollInfo['CO'].value <= ranges[pollInfo['CO'].code].low ? '#2ecc71'
+                    : pollInfo['CO'].value <= ranges[pollInfo['CO'].code].high ? '#f1c40f' : '#e74c3c',
+                    trailColor: '#204d74',
+                    pathTransitionDuration: 0.5,
+                  })}
+                />
               </Section>
 
               <Section>
@@ -228,28 +229,30 @@ const PollutionCard = ({data}) => {
                   })}
                 />
               </Section>
-              </>
+            </>
         )) :
-          <>
-            <Section>
-              <SectionTitle>{selectedPollutant}</SectionTitle>
-              <CircularProgressbar
-                value={pollInfo[selectedPollutant].value}
-                maxValue={ranges[pollInfo[selectedPollutant].code].high}
-                text={`${Math.round(pollInfo[selectedPollutant].value)} ${pollInfo[selectedPollutant].unit}`}
-                styles={buildStyles({
-                  textColor: '#fff',
-                  pathColor: pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].low ? '#2ecc71'
-                  : pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].high ? '#f1c40f' : '#e74c3c',
-                  trailColor: '#204d74',
-                  pathTransitionDuration: 0.5,
-                })}
-              />
-            </Section>
-            <div>
-              {pollInfo[selectedPollutant].sources}
-            </div>
-          </>
+          (Object.keys(pollInfo).length === 6 && (
+            <>
+              <Section>
+                <SectionTitle>{selectedPollutant}</SectionTitle>
+                <CircularProgressbar
+                  value={pollInfo[selectedPollutant].value}
+                  maxValue={ranges[pollInfo[selectedPollutant].code].high}
+                  text={`${Math.round(pollInfo[selectedPollutant].value)} ${pollInfo[selectedPollutant].unit}`}
+                  styles={buildStyles({
+                    textColor: '#fff',
+                    pathColor: pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].low ? '#2ecc71'
+                    : pollInfo[selectedPollutant].value <= ranges[pollInfo[selectedPollutant].code].high ? '#f1c40f' : '#e74c3c',
+                    trailColor: '#204d74',
+                    pathTransitionDuration: 0.5,
+                  })}
+                />
+              </Section>
+              <div>
+                {pollInfo[selectedPollutant].sources}
+              </div>
+            </>
+          ))
         }
       </BottomCardBody>
     </BottomCard>
