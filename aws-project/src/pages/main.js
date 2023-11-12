@@ -25,10 +25,12 @@ import InfoCard from "../components/InfoCard/InfoCard";
 function MainPage() {
   //country handler
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [clickedCoords, setClickedCoords] = useState({ lat: null, lng: null });
   //alert(selectedCountry);
 
-  const handleCountryClick = (countryName) => {
-    setSelectedCountry(countryName);
+  const handleCountryClick = (countryData) => {
+    setSelectedCountry(countryData.name);
+    setClickedCoords({ lat: countryData.lat, lng: countryData.lng });
   };
 
   return (
@@ -37,7 +39,7 @@ function MainPage() {
       <MainPageBody>
         <MainSideBar>
           <DateDisplay />
-          <InfoCard countryName={selectedCountry} />
+          <InfoCard countryName={selectedCountry} location={clickedCoords} />
           <CO2Card/>
           <EnvironmentalCard/>
         </MainSideBar>
