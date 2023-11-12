@@ -12,6 +12,7 @@ import CO2Map from "../components/CO2Map/CO2Map";
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
 import DateDisplay from "../components/dateBlock/dateBlock";
+import PollutionCard from "../components/bottomCard/bottomCard";
 
 
 //left side
@@ -37,7 +38,7 @@ function MainPage() {
 
   const handleMapClick = (lat, lng) => {
     setClickedCoords({ lat, lng });
-};
+  };
 
 
   return (
@@ -52,7 +53,8 @@ function MainPage() {
         </MainSideBar>
 
         <MainContent>
-        <CO2Map onCountryClick={handleCountryClick} />
+          <CO2Map onCountryClick={handleCountryClick} />
+          <PollutionCard></PollutionCard>
         </MainContent>
 
         <MainSideBar>

@@ -55,7 +55,7 @@ function CO2Map({ onCountryClick, onMapClick }) {
     const lng = e.latlng.lng;
     setClickedPosition([lat, lng]);
     onMapClick && onMapClick(lat, lng);
-};
+  };
 
     // Define the style for the GeoJSON countries
     const countryStyle = {
@@ -71,7 +71,7 @@ function CO2Map({ onCountryClick, onMapClick }) {
       center={position} 
       minZoom={1.5} 
       zoom={2} 
-      style={{ height: "100%", width: "100%" }} 
+      style={{ height: "100%", width: "100%", borderTopLeftRadius: "5px", borderTopRightRadius: "5px" }} 
       maxBounds={maxBounds}
       >
         <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />

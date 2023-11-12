@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
+import { useEffect, useState } from 'react';
 
 // Global styles to include the Poppins font
 const globalStyles = css`
@@ -15,6 +16,7 @@ const Card = styled.div`
   color: #ffffff;
   border-radius: 12px;
   padding: 20px;
+  margin: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); // Shadow for depth
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
@@ -72,15 +74,26 @@ const policies = [
 ];
 
 const PolicyCard = () => {
+  const [location, setLocation] = useState();
   const handlePolicyClick = (url) => {
     window.open(url); // or use window.open(url, '_blank') for a new tab
   };
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const {latitude, longitude} = pos.coords;
+      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+      fetch(url).then(res=>res.json()).then(data=>setLocation(data.address))
+    });
+  }, []);
 
   return (
     <>
       <Global styles={globalStyles} />
       <Card>
-        <CardTitle>Local Policies & Initiatives</CardTitle>
+        <CardTitle>
+          Local Policies & Initiatives
+        </CardTitle>
         {policies.map((policy, index) => (
           <PolicyItem key={index} onClick={() => handlePolicyClick(policy.link)}>
             <PolicyName>{policy.name}</PolicyName>
