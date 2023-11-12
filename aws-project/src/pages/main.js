@@ -14,6 +14,7 @@ import CountryInfoCard from '../components/countryInfoCard/CountryInfoCard';
 import FootPrintCard from "../components/eduCards/footprintCard/footprintCard";
 import MainHeader from "../components/header/header";
 import MainSideBar from "../components/sidebar/sidebar";
+import DateDisplay from "../components/dateBlock/dateBlock";
 
 function MainPage() {
   return (
@@ -21,6 +22,7 @@ function MainPage() {
       <MainHeader />
       <MainPageBody>
         <MainSideBar>
+          <DateDisplay />
         </MainSideBar>
 
         <MainContent>
