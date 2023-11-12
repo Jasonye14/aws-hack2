@@ -31,6 +31,7 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 #### Growth Rate Analysis
 - Visualization of the population growth rate.
 - Includes a color-coded bar indicating positive or negative growth.
+- Note*(The data was scaled against an assumed 6% max population growth)
 
 #### Emissions Per Capita
 - Details CO2 emissions per capita.
