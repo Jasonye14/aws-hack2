@@ -16,7 +16,7 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 
 ### CO2 Emissions Tracking Card
 
-**#### Dynamic Data Representation**
+**Dynamic Data Representation**
 - Showcases CO2 emissions and environmental data for different countries.
 - Dynamically updates based on the selected country.
 
