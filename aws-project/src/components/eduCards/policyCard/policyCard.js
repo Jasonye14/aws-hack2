@@ -2,6 +2,7 @@
 import styled from '@emotion/styled';
 import { Global, css } from '@emotion/react';
 import { useEffect, useState } from 'react';
+import { initiatives } from './sampleInitiatives';
 
 // Global styles to include the Poppins font
 const globalStyles = css`
@@ -60,19 +61,6 @@ const PolicyDescription = styled.p`
   color: #bbbbbb; // Lighter text for the description
 `;
 
-const policies = [
-  {
-    name: 'Climate Action Plan (CAP)',
-    description: 'A strategic framework for measuring, planning, and reducing greenhouse gas (GHG) emissions and related climatic impacts.',
-    link: "https://www.bethlehem-pa.gov/Public-Works/Climate-Action-Plan"
-  },
-  {
-    name: 'Green Drinks',
-    description: 'An informal monthly mixer that brings together folks who are interested in sustainable business, policy and living',
-    link: "http://www.greendrinks.org/PA/Lehigh%20Valley"
-  },
-];
-
 const PolicyCard = () => {
   const [location, setLocation] = useState();
   const handlePolicyClick = (url) => {
@@ -94,7 +82,7 @@ const PolicyCard = () => {
         <CardTitle>
           Local Policies & Initiatives
         </CardTitle>
-        {policies.map((policy, index) => (
+        {initiatives.map((policy, index) => (
           <PolicyItem key={index} onClick={() => handlePolicyClick(policy.link)}>
             <PolicyName>{policy.name}</PolicyName>
             <PolicyDescription>{policy.description}</PolicyDescription>

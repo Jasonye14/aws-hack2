@@ -77,7 +77,7 @@ const EcoProductCard = () => {
       </Dropdown>
       <ProductList>
         {ecoFriendlyProducts[category].map((product, index) => (
-          <ProductLink>
+          <ProductLink key={index}>
             <a href={product.url} target='_blank' rel="noopener noreferrer">
               {product.name}
             </a>

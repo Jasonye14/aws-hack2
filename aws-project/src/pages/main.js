@@ -37,8 +37,45 @@ function MainPage() {
   };
 
   const handleMapClick = (lat, lng) => {
-    setClickedCoords({ lat, lng });
+    setClickedCoords({ lat: lat, lng: lng });
   };
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    console.log("coords clicked")
+    const url = 'https://airquality.googleapis.com/v1/currentConditions:lookup?key=AIzaSyACtvFhkIF7nUaCXpLiZmpauqJG5mTPaB4';
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+    const body = JSON.stringify({
+      "universalAqi": true,
+      "location": {
+        "latitude": clickedCoords.lat,
+        "longitude": clickedCoords.lng
+      },
+      "extraComputations": [
+        "HEALTH_RECOMMENDATIONS",
+        "DOMINANT_POLLUTANT_CONCENTRATION",
+        "POLLUTANT_CONCENTRATION",
+        "LOCAL_AQI",
+        "POLLUTANT_ADDITIONAL_INFO"
+      ],
+      "languageCode": "en"
+    });
+
+    fetch(url, {
+      method: 'POST',
+      headers: headers,
+      body: body
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      setData(data); // Saving the data to the state
+    })
+    .catch(error => console.error('Error:', error));
+  }, [clickedCoords]);
 
 
   return (
@@ -49,18 +86,18 @@ function MainPage() {
           <DateDisplay />
           <InfoCard countryName={selectedCountry} location={clickedCoords} />
           <CO2Card/>
-          <EnvironmentalCard/>
+          <EnvironmentalCard data={data}/>
         </MainSideBar>
 
         <MainContent>
           <CO2Map onCountryClick={handleCountryClick} />
-          <PollutionCard></PollutionCard>
+          <PollutionCard data={data}></PollutionCard>
         </MainContent>
 
         <MainSideBar>
           <FootPrintCard></FootPrintCard>
           <EcoProductCard></EcoProductCard>
-          <PolicyCard></PolicyCard>
+          <PolicyCard data={data}></PolicyCard>
         </MainSideBar>
       </MainPageBody>
     </MainPageStyle>
