@@ -3,9 +3,11 @@ import React from "react";
 // Components
 import { Sidebar } from "./sidebarStyles";
 
-function MainSideBar() {
+function MainSideBar(props) {
   return (
-    <Sidebar>This is the sidebar...</Sidebar>
+    <Sidebar>
+      {props.children}
+    </Sidebar>
   );
 }
 

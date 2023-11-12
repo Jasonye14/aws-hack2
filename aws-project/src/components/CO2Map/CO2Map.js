@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 import countries from '../custom.geo.json';
 import { point, centerOfMass } from '@turf/turf';
 
-function CO2Map() {
+function CO2Map({ onCountryClick }) {
     const [activeCountry, setActiveCountry] = useState(null);
     const position = [51.505, -0.09]; // Center of the map
     const maxBounds = [[-90, -180], [90, 180]]; // Maximum bounds for the map
@@ -27,6 +27,9 @@ function CO2Map() {
 
     const onEachCountry = (country, layer) => {
       layer.on({
+        click: () => {
+          onCountryClick(country.properties.name);
+        },
         mouseover: () => {
           const coordinates = getCustomCentroid(country);
           setActiveCountry({
@@ -51,7 +54,7 @@ function CO2Map() {
     };
 
     return (
-      <MapContainer center={position} zoom={2} style={{ height: "100%" }} maxBounds={maxBounds}>
+      <MapContainer center={position} minZoom={1.5} zoom={2} style={{ height: "100%", width: "100%" }} maxBounds={maxBounds}>
         <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png" />
         <GeoJSON data={countries} style={countryStyle} onEachFeature={onEachCountry} />
         {activeCountry && (
