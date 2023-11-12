@@ -1,0 +1,63 @@
+.environmental-card {
+    /* background: #2c3e50; */
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    width: 300px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .button-group button.active {
+    border-color: white;
+  }
+  
+  .stat-group {
+    margin-bottom: 20px;
+  }
+  
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .stat-label {
+    font-size: 16px;
+  }
+  
+  .stat-value {
+    font-weight: bold;
+  }
+  
+  .progress-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .circular-progress-container {
+    width: 80px; /* Adjust the size of the circular progress bar here */
+    margin-bottom: 8px;
+  }
+  
+  .progress-label {
+    font-size: 14px;
+    text-align: center;
+  }
+  
