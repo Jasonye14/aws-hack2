@@ -37,18 +37,14 @@ const SectionTitle = styled.h3`
   font-size: 14px; // Adjust font size as needed
 `;
 
-const Selector = styled.select`
-  background-color: #252525;
-  color: #fff;
-  border: 1px solid #333;
-  border-radius: 4px;
-  padding: 5px;
-  margin-bottom: 10px;
-
-  .CircularProgressBar {
-    width: 100px;
-  }
-`;
+// const Selector = styled.select`
+//   background-color: #252525;
+//   color: #fff;
+//   border: 1px solid #333;
+//   border-radius: 4px;
+//   padding: 5px;
+//   margin-bottom: 10px;
+// `;
 
 const ButtonRow = styled.div`
   background-color: #2c3e50; // Dark background color
@@ -107,14 +103,14 @@ const ranges = {
   }
 }
 
-const pollutionLevels = {
-  CO: { level: 6, max: 50, unit: 'ppm' }, // values in ppm
-  SO2: { level: 5, max: 500, unit: 'ppb' }, // values in ppb
-  NO2: { level: 30, max: 200, unit: 'ppb' }, // values in ppb
-  O3: { level: 60, max: 240, unit: 'ppb' }, // values in ppb
-  PM25: { level: 12, max: 35, unit: 'µg/m3' }, // values in µg/m3
-  PM10: { level: 25, max: 50, unit: 'µg/m3' }, // values in µg/m3
-};
+// const pollutionLevels = {
+//   CO: { level: 6, max: 50, unit: 'ppm' }, // values in ppm
+//   SO2: { level: 5, max: 500, unit: 'ppb' }, // values in ppb
+//   NO2: { level: 30, max: 200, unit: 'ppb' }, // values in ppb
+//   O3: { level: 60, max: 240, unit: 'ppb' }, // values in ppb
+//   PM25: { level: 12, max: 35, unit: 'µg/m3' }, // values in µg/m3
+//   PM10: { level: 25, max: 50, unit: 'µg/m3' }, // values in µg/m3
+// };
 
 const PollutionCard = ({data}) => {
   const [selectedPollutant, setSelectedPollutant] = useState('All');
@@ -153,20 +149,20 @@ const PollutionCard = ({data}) => {
     }
   }, [data])
 
-  useEffect(() => {
-    console.log(pollInfo)
-  }, [pollInfo])
+  // useEffect(() => {
+  //   console.log(pollInfo)
+  // }, [pollInfo])
 
-  useEffect(() => {
-    if (selectedPollutant != 'All') {
-      console.log(ranges[pollInfo[selectedPollutant].code].high);
+  // useEffect(() => {
+  //   if (selectedPollutant !== 'All') {
+  //     console.log(ranges[pollInfo[selectedPollutant].code].high);
 
-    }
-  }, [selectedPollutant]);
+  //   }
+  // }, [selectedPollutant, pollInfo]);
 
-  const handleChange = (event) => {
-    setSelectedPollutant(event.target.value);
-  };
+  // const handleChange = (event) => {
+  //   setSelectedPollutant(event.target.value);
+  // };
 
 
   return (
