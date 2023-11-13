@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, GeoJSON, useMap, Popup} from 'react-leaflet';
+import React, { useState} from 'react';
+import { MapContainer, TileLayer, GeoJSON, Popup} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import countries from '../custom.geo.json';
-import { point, centerOfMass } from '@turf/turf';
+import { centerOfMass } from '@turf/turf';
 
 function CO2Map({ onCountryClick, onMapClick }) {
   const [activeCountry, setActiveCountry] = useState(null);
+  /* eslint-disable no-unused-vars */
   const [clickedPosition, setClickedPosition] = useState(null);
+  /* eslint-enable no-unused-vars */
   const position = [51.505, -0.09]; // Center of the map
   const maxBounds = [[-90, -180], [90, 180]]; // Maximum bounds for the map
 
@@ -50,12 +52,12 @@ function CO2Map({ onCountryClick, onMapClick }) {
       });
   };
 
-  const mapClick = (e) => {
-    const lat = e.latlng.lat;
-    const lng = e.latlng.lng;
-    setClickedPosition([lat, lng]);
-    onMapClick && onMapClick(lat, lng);
-  };
+  // const mapClick = (e) => {
+  //   const lat = e.latlng.lat;
+  //   const lng = e.latlng.lng;
+  //   setClickedPosition([lat, lng]);
+  //   onMapClick && onMapClick(lat, lng);
+  // };
 
     // Define the style for the GeoJSON countries
     const countryStyle = {

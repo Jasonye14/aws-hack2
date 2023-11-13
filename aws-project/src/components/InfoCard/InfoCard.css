@@ -12,9 +12,6 @@
   width: fit-content; /* only as wide as it needs to be */
 }
 
-.country-section {
-  /*padding-bottom: 10px; /* padding at the bottom */
-}
 
 .country-label {
   font-size: 0.8em; /* smaller font size for the label */
@@ -24,8 +21,4 @@
 
 .country-name {
   font-size: 1em; /* font size for the country name */
-}
-
-.coordinates{
-  
 }

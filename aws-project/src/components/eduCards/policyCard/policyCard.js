@@ -62,7 +62,9 @@ const PolicyDescription = styled.p`
 `;
 
 const PolicyCard = () => {
+  /* eslint-disable no-unused-vars */
   const [location, setLocation] = useState();
+  /* eslint-enable no-unused-vars */
   const handlePolicyClick = (url) => {
     window.open(url); // or use window.open(url, '_blank') for a new tab
   };
