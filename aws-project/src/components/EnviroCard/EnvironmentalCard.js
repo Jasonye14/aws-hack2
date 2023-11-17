@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './EnvironmentalCard.css';
 
@@ -15,6 +14,7 @@ const EnvironmentalCard = ({data}) => {
       })
     }
   }, [data]);
+
 
 
   // const data = {
