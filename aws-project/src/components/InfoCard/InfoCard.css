@@ -1,8 +1,9 @@
+
 .info-card-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   /*background-color: #0F1924; /* dark background */
   color: white; /* white text */
   padding: 10px 30px; /* some padding */
@@ -12,9 +13,6 @@
   width: fit-content; /* only as wide as it needs to be */
 }
 
-.country-section {
-  /*padding-bottom: 10px; /* padding at the bottom */
-}
 
 .country-label {
   font-size: 0.8em; /* smaller font size for the label */
@@ -24,8 +22,4 @@
 
 .country-name {
   font-size: 1em; /* font size for the country name */
-}
-
-.coordinates{
-  
 }

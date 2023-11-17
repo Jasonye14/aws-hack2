@@ -1,7 +1,12 @@
 # Airlytics
 
+## Live Site
+https://bespoke-llama-f68930.netlify.app/
+
 ## Overview
 Airlytics is a dynamic visualization tool designed to demonstrate the varying environmental factors across the globe. Leveraging real-time data, this tool provides an insightful view into how different regions experience distinct environmental conditions. This project is ideal for environmental researchers, data analysts, and anyone interested in global environmental trends.
+
+![Airlytics Site](site-preview.jpg)
 
 ## Applciation Introduction
 1. **Interactive Data Visualization:** Airlytics offers an interactive map interface that allows users to explore various environmental factors across different regions of the world.
@@ -29,6 +34,7 @@ Airlytics is a dynamic visualization tool designed to demonstrate the varying en
 #### Growth Rate Analysis
 - Visualization of the population growth rate.
 - Includes a color-coded bar indicating positive or negative growth.
+- Note*(The data was scaled against an assumed 6% max population growth)
 
 #### Emissions Per Capita
 - Details CO2 emissions per capita.

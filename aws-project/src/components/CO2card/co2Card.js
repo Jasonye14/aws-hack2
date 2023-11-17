@@ -55,10 +55,10 @@ const CO2Card = ({ countryName }) => {
         }
     }, [countryName]);
 
-    const calculateProgress = (current, previous) => {
-        if (previous === 0) return 0;
-        return (current / previous) * 100;
-    };
+    // const calculateProgress = (current, previous) => {
+    //     if (previous === 0) return 0;
+    //     return (current / previous) * 100;
+    // };
 
     const calculateGrowthRateBar = (growthRate) => {
         const scaledGrowthRate = growthRate / maxGrowthRate * 100;
