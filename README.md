@@ -3,6 +3,9 @@
 ## Live Site
 https://bespoke-llama-f68930.netlify.app/
 
+## Devpost
+https://devpost.com/software/airlytics
+
 ## Overview
 Airlytics is a dynamic visualization tool designed to demonstrate the varying environmental factors across the globe. Leveraging real-time data, this tool provides an insightful view into how different regions experience distinct environmental conditions. This project is ideal for environmental researchers, data analysts, and anyone interested in global environmental trends.
 
